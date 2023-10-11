@@ -44,7 +44,7 @@ eval "`fnm env`"
 [[ -d $HOME/.local/go ]] && export PATH=$HOME/.local/go/bin:$PATH
 
 # nvim
-[[ -d /usr/local/nvim-linux64 ]] && export PATH=/usr/local/nvim-linux64/bin:$PATH
+[[ -d $HOME/.local/nvim-linux64 ]] && export PATH=$HOME/.local/nvim-linux64/bin:$PATH
 
 # tools
 
