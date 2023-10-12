@@ -30,7 +30,8 @@ local on_attach = function(client, bufnr)
 end
 
 return {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
+    -- "jose-elias-alvarez/null-ls.nvim",
     opts = function()
         local null_ls = require("null-ls")
         local formatting = null_ls.builtins.formatting
