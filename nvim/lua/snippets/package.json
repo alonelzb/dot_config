@@ -39,6 +39,10 @@
                     "go"
                 ],
                 "path": "./go.json"
+            },
+       {
+                "language": ["md", "markdown"],
+                "path": "./md.json"
             }
     ]
   }
