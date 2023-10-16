@@ -101,7 +101,7 @@ def remove():
 
 
 if __name__ == "__main__":
-    set_nvim()
+    #set_nvim()
 
     #exit()
     targets = [zoxide, atuin, lsd, fd, bat, xh, rg, zellij]
