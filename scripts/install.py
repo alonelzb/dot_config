@@ -16,8 +16,12 @@ atuin = "https://api.github.com/repos/ellie/atuin/releases/latest"
 zoxide = "https://api.github.com/repos/ajeetdsouza/zoxide/releases/latest"
 xh = "https://api.github.com/repos/ducaale/xh/releases/latest"
 zellij = "https://api.github.com/repos/zellij-org/zellij/releases/latest"
+gitui = "https://api.github.com/extrawurst/gitui/releases/latest"
+# https://github.com/extrawurst/gitui/releases/download/v0.24.3/gitui-linux-musl.tar.gz
 
 rg = "https://api.github.com/repos/BurntSushi/ripgrep/releases/latest"
+
+dog = "https://github.com/ogham/dog/releases/download/v0.1.0/dog-v0.1.0-x86_64-unknown-linux-gnu.zip"
 
 
 headers = {
@@ -66,12 +70,12 @@ def set_nvim():
     neovim_url = (
         "https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz"
     )
-    if (Path.home() / '.local'/ 'nvim-linux64' ).exists():
+    if (Path.home() / ".local" / "nvim-linux64").exists():
         print("neovim   is existed in ~/.local/")
     else:
-        print('download neovim')
+        print("download neovim")
         download(neovim_url)
-        shutil.unpack_archive(f"/tmp/nvim-linux64.tar.gz", Path.home()/'.local/')
+        shutil.unpack_archive(f"/tmp/nvim-linux64.tar.gz", Path.home() / ".local/")
         print("neovim install ~/.local/")
 
 
@@ -101,14 +105,14 @@ def remove():
 
 
 if __name__ == "__main__":
-    #set_nvim()
+    # set_nvim()
 
-    #exit()
-    targets = [zoxide, atuin, lsd, fd, bat, xh, rg, zellij]
+    # exit()
+    targets = [zoxide, atuin, lsd, fd, bat, xh, rg, zellij, gitui]
     for target in targets:
         bin_name = target.split("/")[-3]
-        if bin_name == 'ripgrep':
-            bin_name = 'rg'
+        if bin_name == "ripgrep":
+            bin_name = "rg"
         if (Path.home() / ".local/bin" / bin_name).exists():
             print(f"{bin_name:<8} is in ~/.local/bin")
         else:

@@ -10,7 +10,7 @@ return {
             { "<A-/>" },
         },
         config = function()
-            require("Comment").setup({
+            require("Comment").setup(
                 --				pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
 
                 ---LHS of toggle mappings in NORMAL mode
@@ -29,7 +29,7 @@ return {
                 -- below = "gco",
                 ---Add comment at the end of line
                 -- eol = "gcA",
-            })
+            )
 
             vim.keymap.set("n", "<C-_>", require("Comment.api").toggle.linewise.current)
             vim.keymap.set("n", "<A-/>", require("Comment.api").toggle.linewise.current)

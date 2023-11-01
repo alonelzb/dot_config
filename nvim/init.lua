@@ -16,7 +16,7 @@ vim.cmd([[
   hi BgCustom guibg=#483d8b
 
   hi SignColumn guibg=None
-  hi Normal guibg=None
+  hi Normal guibg=#2d2842
   hi NeoTreeCursorLine guibg=#483d8b
   hi BufferLineBufferSelected guibg=#483d8b
 
